@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
-import RightSidebar from "../components/RightSidebar"; // 1. Import the new sidebar
+import RightSideBar from "../components/RightSideBar"; // 1. Import the new sidebar
 import { useSelector } from "react-redux";
 import SongCard from "../components/SongCard";
 import SeekBar from "../components/SeekBar";
@@ -17,7 +17,8 @@ export const SongWithId = AllSongs.map((elem) => ({
 
 const HomeLayout = () => {
   const { isPlaying, currentSong } = useSelector((Store) => Store.song);
-  let { handlePlay, audioRef, handleNext,handlePrev ,shuffle} = SongHook(SongWithId);
+  let { handlePlay, audioRef, handleNext, handlePrev, shuffle } =
+    SongHook(SongWithId);
 
   return (
     <div className="flex flex-col h-screen">
@@ -42,7 +43,7 @@ const HomeLayout = () => {
           })}
         </div>
 
-        <RightSidebar currentSong={currentSong} />
+        <RightSideBar currentSong={currentSong} />
       </div>
 
       <div className="h-[10%]">
@@ -54,8 +55,6 @@ const HomeLayout = () => {
           handleNext={handleNext}
           handlePrev={handlePrev}
           shuffle={shuffle}
-          
-
         />
       </div>
     </div>
