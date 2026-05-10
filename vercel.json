@@ -2,5 +2,6 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "devCommand": "npm run dev",
-  "cleanUrls": true
+  "cleanUrls": true,
+  "nodeVersion": "24.8.0"
 }
