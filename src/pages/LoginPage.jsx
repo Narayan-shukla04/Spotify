@@ -8,6 +8,7 @@ import { store } from "../app/store";
 
 export default function LoginPage() {
   const { reguser } = useSelector((store) => store.regUser);
+  const users = Array.isArray(reguser) ? reguser : [];
 
   let dispatch = useDispatch();
   let navigate = useNavigate();
@@ -22,7 +23,7 @@ export default function LoginPage() {
   } = useForm();
 
   const onSubmit = (data) => {
-    let user = reguser.find((elem) => {
+    let user = users.find((elem) => {
       return elem.email === data.email && elem.password === data.password;
     });
 

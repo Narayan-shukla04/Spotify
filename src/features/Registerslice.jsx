@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const Registerslice = createSlice({
   name: "reguser",
   initialState: {
-    reguser: JSON.parse(localStorage.getItem("reguser"))||null
+    reguser: JSON.parse(localStorage.getItem("reguser")) || [],
   },
   reducers: {
     setUser: (state, action) => {
